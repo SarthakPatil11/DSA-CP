@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1626689884 source:e:\c-sarthak\cpp exp\tempint\main.c
+	<stdio.h>
+	<stdlib.h>
+

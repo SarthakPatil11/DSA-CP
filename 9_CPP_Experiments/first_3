@@ -1,0 +1,53 @@
+#include <iostream>
+using namespace std;
+
+class checkbook
+{
+    private:
+        int list[50];
+        int index;
+        int sum;
+    public:
+        checkbook(){ index = 0;sum = 0;}
+        void friend add_item(checkbook &,int);
+        void friend total(checkbook);
+};
+
+
+void add_item(checkbook & item,int value)
+{
+    if(item.index >= 50)
+    {
+        cout << "\nCheck book is full\n";
+        return;
+    }
+    item.list[item.index] = value;
+    item.index++;
+    item.sum = item.sum + value;
+}
+
+void total(checkbook item)
+{
+    cout << "sum : " << item.sum << "\n";
+}
+
+int main()
+{
+    checkbook book1;
+    add_item(book1,10);
+    add_item(book1,20);
+    add_item(book1,90);
+    add_item(book1,50);
+    add_item(book1,10);
+    add_item(book1,80);
+    total(book1);
+
+    checkbook book2;
+    add_item(book2,50);
+    add_item(book2,10);
+    add_item(book2,40);
+    add_item(book2,20);
+    add_item(book2,80);
+    add_item(book2,20);
+    total(book2);
+}

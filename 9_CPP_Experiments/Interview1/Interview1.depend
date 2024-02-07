@@ -1,0 +1,5 @@
+# depslib dependency file v1.0
+1626688588 source:e:\c-sarthak\cpp exp\interview1\main.c
+	<stdio.h>
+	<stdlib.h>
+
